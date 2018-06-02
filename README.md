@@ -13,7 +13,7 @@
 
 5. manually change a few lines in .conkyrc 
 
-line 37 OS${alignr}e.g. Ubuntu,Mint,Arch
+   line 37 OS${alignr}e.g. Ubuntu,Mint,Arch
 
 line 41 Desktop${alignr}e.g. xfce,mate,kde
 
