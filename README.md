@@ -1,1 +1,1 @@
-# This is my first conkyrc file
+# This is my first conkyrc file.
