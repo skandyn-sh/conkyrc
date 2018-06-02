@@ -25,6 +25,6 @@
 
    line 63 #Temperature${alignr}${execi 30 hddtemp -n /dev/sda}°C  --add HDD/SDD temperature
 
-   If you want to add the hdd temperature you must enter in the terminal
+   If you want to add the hdd temperature, you must enter in the terminal
 
    sudo chmod +s /usr/sbin/hddtemp
