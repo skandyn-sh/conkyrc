@@ -3,11 +3,11 @@ Up${alignr}${uptime}
 Date${alignr}${time %x}
 Time${alignr}${time %X}
 $stippled_hr
-OS${alignr}Bunsen Labs
+OS${alignr}
 Host${alignr}${nodename}
 Kernel${alignr}${kernel}
 Machine${alignr}${machine}
-Desktop${alignr}openbox
+Desktop${alignr}
 $stippled_hr
 RAM${alignr}${memmax}
 In Use${alignr}${memperc}% = ${mem}
