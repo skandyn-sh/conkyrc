@@ -11,7 +11,7 @@
 
 4. manually change gmail.sh login and password
 
-5. manually change a few lines in .conkyrc 
+5. manually change two lines in .conkyrc 
 
    line 37 OS${alignr}e.g. Ubuntu,Mint,Arch
 
