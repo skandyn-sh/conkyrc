@@ -1,7 +1,7 @@
 # conkyrc
-#This is my white conky.
+This is my white conky.
 
-#Installation
+Installation
 
 1. Extract the zip file
 
