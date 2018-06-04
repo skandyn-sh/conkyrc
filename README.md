@@ -19,11 +19,11 @@
 
 6. If you want, you can add some new lines, just delete #
 
-   line 45 #Swap${alignr}${swap} of ${swapmax} -- add Swap
+   line 45 #Swap${alignr}${swap} of ${swapmax}    # add Swap
 
-   line 53 #Temperature$alignr ${hwmon temp 1}°C ${hwmon temp 2}°C #add CPU temperature
+   line 53 #Temperature$alignr ${hwmon temp 1}°C ${hwmon temp 2}°C    # add CPU temperature
 
-   line 63 #Temperature${alignr}${execi 30 hddtemp -n /dev/sda}°C  #add HDD/SSD temperature
+   line 63 #Temperature${alignr}${execi 30 hddtemp -n /dev/sda}°C    # add HDD/SSD temperature
 
    If you want to add the hdd temperature, you must enter in the terminal
 
