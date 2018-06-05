@@ -8,13 +8,6 @@ https://${gmail_login}:${gmail_password}@mail.google.com/mail/feed/atom \
 --no-check-certificate | grep 'fullcount' \
 | sed -e 's/.*<fullcount>//;s/<\/fullcount>.*//' 2>/dev/null)"
 
-#if [ -z "$data" ]; then
-#echo "Connection Error !"
-#else
-#echo "GMail: $data msg(s)"
-#fi
-
-
 if [ -z "$data" ]; then
 echo "Connection Error !"
 else
