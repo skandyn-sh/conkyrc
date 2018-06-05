@@ -5,7 +5,7 @@ Installation
 
 1. Extract the zip file
 
-2. Copy .conkyrc and gmail.sh to /home/ or yours specified path
+2. Copy .conkyrc and gmail.sh to /home/
 
 3. chmod +x gmail.sh
 
