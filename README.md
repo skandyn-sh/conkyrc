@@ -1,5 +1,5 @@
 # conkyrc
-This is my white conky.
+This is my white conky
 
 Installation
 
