@@ -71,5 +71,5 @@ Running Processes$alignr$running_processes of $processes
 $stippled_hr
 Updates ${alignr}${execi 3600 aptitude search "~U" | wc -l | tail} package(s)
 $stippled_hr
-Gmail${alignr}${execi 60 ~/gmail.sh}
+Gmail${alignr}${execi 60 ~/.config/conky/scripts/gmail.sh}
 ${membar 0}
