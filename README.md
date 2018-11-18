@@ -3,7 +3,9 @@ This is my white conky
 
 Installation
 
-1. Extract the zip file
+1. Clone or download
+
+   git clone https://github.com/skandyn-sh/conkyrc.git
 
 2. Copy file .conkyrc to /home/user and copy file gmail.sh to ~/.config/conky/scripts
 
