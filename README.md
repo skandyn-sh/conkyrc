@@ -7,7 +7,7 @@ Installation
 
    git clone https://github.com/skandyn-sh/conkyrc.git
 
-2. Copy file .conkyrc to /home/user and copy file gmail.sh to ~/.config/conky/scripts
+2. Copy file .conkyrc to /home/username and copy file gmail.sh to ~/.config/conky/scripts
 
 3. chmod +x gmail.sh
 
