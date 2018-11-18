@@ -74,9 +74,6 @@ conky.config = {
 };
 
 conky.text = [[
-# ${alignr}S Y S T E M    I N F O
-#Conky version${alignr} ${conky_version}
-#${membar 0}
 Up${alignr}${uptime}
 Date${alignr}${time %x}
 Time${alignr}${time %X}
@@ -90,7 +87,6 @@ File system${alignr}${fs_type}
 $stippled_hr
 RAM${alignr}$mem of $memmax
 ${membar 6,70}${alignr}${memperc}%
-#In Use${alignr}${memperc}% = ${mem}
 Swap${alignr}${swap} of ${swapmax}
 ${swapbar 6,70}${alignr}${swapperc}%
 ${top_mem name 1} $alignr ${top_mem mem 1}
@@ -100,18 +96,14 @@ $stippled_hr
 CPU${alignr} @ ${freq_g}GHz
 ${cpubar 6,70}${alignr}${cpu cpu}%
 LoadAvg${alignr}${loadavg}
-#${alignr}${acpitemp}°C
 ${top name 1} $alignr ${top cpu 1}
 ${top name 2} $alignr ${top cpu 2}
 ${top name 3} $alignr ${top cpu 3}
 $stippled_hr
-#SSD read/write$alignr ${diskio_read} / ${diskio_write}
 /Root${alignr}${fs_free /} / ${fs_size /}
 /Home${alignr}${fs_free /home} / ${fs_size /home}
 Read: $diskio_read/s${alignr}${diskiograph_read 6,70}
 Write: $diskio_write/s${alignr}${diskiograph_write 6,70}
-#Read${alignr}${diskio_read}
-#Write${alignr}${diskio_write}
 $stippled_hr
 Up: ${upspeed wlp2s0} kb/s ${alignr}${upspeedgraph wlp2s0 6,70}
 Upload: ${alignr}${totalup wlp2s0}
@@ -128,9 +120,7 @@ Updates ${alignr}${execi 3600 aptitude search "~U" | wc -l | tail} package(s)
 $stippled_hr
 Gmail${alignr}${execi 60 ~/.config/conky/scripts/gmail.sh}
 $stippled_hr
-#IP${alignr}${exec curl ipinfo.io/ip}
 Conky version${alignr} ${conky_version}
-#${membar 0}
 ]];
 
 
