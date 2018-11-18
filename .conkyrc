@@ -1,75 +1,136 @@
-background yes
-use_xft yes
-xftfont Sans:size=10
-xftalpha 1
-update_interval 1.0
-total_run_times 0
-own_window yes
-own_window_transparent yes
-own_window_type desktop
-#own_window_argb_visual yes
-own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
-double_buffer yes
-minimum_size 200 200
-maximum_width 240
-draw_shades no
-draw_outline no
-draw_borders no
-draw_graph_borders yes
-default_color FFFFFF
-default_shade_color 000000
-default_outline_color 828282
-alignment top_right
-gap_x 7
-gap_y 56
-no_buffers yes
-uppercase no
-cpu_avg_samples 2
-override_utf8_locale yes
+conky.config = {
 
-TEXT
+--  Begin Window Settings
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_transparent = true,
+	own_window_hints = 'undecorated,below,skip_taskbar,skip_pager,sticky',
+	own_window_colour = '000000',
+	own_window_class = 'Conky',
+	own_window_title = 'info conky',
+
+--	own_window_argb_visual = true,
+--	own_window_argb_value = 0,
+
+	minimum_width = 200, minimum_height = 0,
+	maximum_width = 200,
+
+	gap_x = 7,-- l|r
+	gap_y = 47,-- u|d
+
+	alignment = 'top_right',
+
+--  End Window Settings
+--  Font Settings
+	use_xft = true,
+	font = 'Sans:size=8',
+	xftalpha = 1,
+	override_utf8_locale = true,
+	uppercase = false,
+
+--  End Font Settings
+--  Colour Settings
+
+	draw_shades = false,
+	default_shade_color = '000000',
+	draw_outline = false,
+	default_outline_color = '000000',
+
+	default_color = 'FFFFFF',-- Beam green
+	color0 = 'B0E0E6',-- PowderBlue
+	color1 = '778899',-- LightSlateGray
+	color2 = 'D8BFD8',-- Thistle
+	color3 = '9ACD32',-- YellowGreen
+	color4 = 'FFA07A',-- LightSalmon
+	color5 = 'FFDEAD',-- NavajoWhite
+	color6 = '00BFFF',-- DeepSkyBlue
+	color7 = '5F9EA0',-- CadetBlue
+	color8 = 'BDB76B',-- DarkKhaki
+	color9 = 'C0C0C0',-- Silver
+
+--  End Colour Settings
+--  Borders Section
+
+	draw_borders = false,
+	stippled_borders = 5,
+	border_inner_margin = 5,
+	border_outer_margin = 0,
+	border_width = 2,
+
+--  End Borders Secton
+--  Miscellaneous Section
+
+	background = true,
+	use_spacer = 'none',
+	no_buffers = true,
+	short_units = true,
+	imlib_cache_size = 0,
+	double_buffer = true,
+
+--  End Miscellaneous Section
+
+	update_interval = 1,
+
+};
+
+conky.text = [[
+# ${alignr}S Y S T E M    I N F O
 #Conky version${alignr} ${conky_version}
-${membar 0}
+#${membar 0}
 Up${alignr}${uptime}
 Date${alignr}${time %x}
 Time${alignr}${time %X}
 $stippled_hr
-OS${alignr}Linux
+OS${alignr}Bunsen Labs
 Host${alignr}${nodename}
 Kernel${alignr}${kernel}
 Machine${alignr}${machine}
 Desktop${alignr}openbox
+File system${alignr}${fs_type}
 $stippled_hr
-RAM${alignr}${memmax}
-In Use${alignr}${memperc}% = ${mem}
-#Swap${alignr}${swap} of ${swapmax}
-Highest  $alignr %
+RAM${alignr}$mem of $memmax
+${membar 6,70}${alignr}${memperc}%
+#In Use${alignr}${memperc}% = ${mem}
+Swap${alignr}${swap} of ${swapmax}
+${swapbar 6,70}${alignr}${swapperc}%
 ${top_mem name 1} $alignr ${top_mem mem 1}
 ${top_mem name 2} $alignr ${top_mem mem 2}
 ${top_mem name 3} $alignr ${top_mem mem 3}
 $stippled_hr
-CPU${alignr}${cpu cpu0}% @ ${freq_g}GHz
+CPU${alignr} @ ${freq_g}GHz
+${cpubar 6,70}${alignr}${cpu cpu}%
 LoadAvg${alignr}${loadavg}
-#Temperature$alignr ${hwmon temp 1}°C ${hwmon temp 2}°C
-Highest  $alignr %
+#${alignr}${acpitemp}°C
 ${top name 1} $alignr ${top cpu 1}
 ${top name 2} $alignr ${top cpu 2}
 ${top name 3} $alignr ${top cpu 3}
 $stippled_hr
+#SSD read/write$alignr ${diskio_read} / ${diskio_write}
 /Root${alignr}${fs_free /} / ${fs_size /}
 /Home${alignr}${fs_free /home} / ${fs_size /home}
-Read: $diskio_read/s${alignr}${diskiograph_read 8,60}
-Write: $diskio_write/s${alignr}${diskiograph_write 8,60}
-#Temperature${alignr}${execi 30 hddtemp -n /dev/sda}°C
+Read: $diskio_read/s${alignr}${diskiograph_read 6,70}
+Write: $diskio_write/s${alignr}${diskiograph_write 6,70}
+#Read${alignr}${diskio_read}
+#Write${alignr}${diskio_write}
 $stippled_hr
-Up: ${upspeed wlp2s0} kb/s ${alignr}${upspeedgraph wlp2s0 8,60}
+Up: ${upspeed wlp2s0} kb/s ${alignr}${upspeedgraph wlp2s0 6,70}
 Upload: ${alignr}${totalup wlp2s0}
-Down: ${downspeed wlp2s0} kb/s ${alignr}${downspeedgraph wlp2s0 8,60}
+Down: ${downspeed wlp2s0} kb/s ${alignr}${downspeedgraph wlp2s0 6,70}
 Download: ${alignr}${totaldown wlp2s0}
+$stippled_hr
+Temp cpu1$alignr ${hwmon temp 1}°C
+Temp cpu2$alignr ${hwmon temp 2}°C
+Temp disk${alignr}${execi 30 hddtemp -n /dev/sda}°C
 $stippled_hr
 Running Processes$alignr$running_processes of $processes
 $stippled_hr
 Updates ${alignr}${execi 3600 aptitude search "~U" | wc -l | tail} package(s)
 $stippled_hr
 Gmail${alignr}${execi 60 ~/.config/conky/scripts/gmail.sh}
-${membar 0}
+$stippled_hr
+#IP${alignr}${exec curl ipinfo.io/ip}
+Conky version${alignr} ${conky_version}
+#${membar 0}
+]];
+
+
