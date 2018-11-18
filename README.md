@@ -19,4 +19,4 @@ Installation
    
  6. to add the hdd temperature, you must enter in the terminal
 
-   sudo chmod +s /usr/sbin/hddtemp
+    sudo chmod +s /usr/sbin/hddtemp 
