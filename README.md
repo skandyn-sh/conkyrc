@@ -13,9 +13,9 @@ Installation
 
 5. manually change two lines in .conkyrc 
 
-   line 81 OS${alignr} e.g. Ubuntu,Mint,Arch
+   line 81 OS${alignr} e.g. Ubuntu, Mint, Arch
 
-   line 85 Desktop${alignr} e.g. xfce,mate,kde
+   line 85 Desktop${alignr} e.g. xfce, mate, kde
    
  6. to add the hdd temperature, you must enter in the terminal
 
